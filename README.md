@@ -1,4 +1,4 @@
-# Diverse Sampling
+numpy in nutshell# Diverse Sampling
 
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/diverse-human-motion-prediction-via-gumbel/human-pose-forecasting-on-human36m)](https://paperswithcode.com/sota/human-pose-forecasting-on-human36m?p=diverse-human-motion-prediction-via-gumbel)
 
@@ -24,6 +24,7 @@ and another offical [reimplementation](https://github.com/Droliven/DHMP_jittor) 
 
 
 ## Authors
+ls
 
 1. [Lingwei Dang](https://github.com/Droliven), School of Computer Science and Engineering, South China University of Technology, China, [levondang@163.com](mailto:levondang@163.com)
 2. [Yongwei Nie](https://nieyongwei.net), School of Computer Science and Engineering, South China University of Technology, China, [nieyongwei@scut.edu.cn](mailto:nieyongwei@scut.edu.cn)

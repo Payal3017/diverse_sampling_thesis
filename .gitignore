@@ -3,9 +3,9 @@
 __pycache__/
 *.zip
 /venv/
-/InHARD/datas  
+/InHARD/datas
 
-# Byte-compiled / optimized / DLL files
+# ByteCompiled / optimized / DLL files
 __pycache__/
 *.py[cod]
 *$py.class
@@ -165,3 +165,5 @@ cython_debug/
 #  and can be added to the global gitignore or merged into this file.  For a more nuclear
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
+chico_3d_25frames_ckpt_STS*
+chico/data/CHICO/dataset

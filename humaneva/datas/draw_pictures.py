@@ -268,7 +268,5 @@ def draw_multi_seqs_2d(seqs, gt_cnt=3, I=[], J=[], LR=[], t_his=25, full_path=""
 
 
 if __name__ == "__main__":
-
-
     pass
 
