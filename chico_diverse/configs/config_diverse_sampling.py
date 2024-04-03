@@ -3,8 +3,6 @@
 import getpass
 import os
 
-import numpy as np
-
 
 class ConfigDiverseSampling:
     def __init__(self, exp_name="", device="cuda:0", num_works=0):
@@ -33,111 +31,14 @@ class ConfigDiverseSampling:
         self.multimodal_threshold = 0.5
         self.train_similar_cnt = 10
 
-        self.subjects = {
-            "train": [f"S{i}" for i in [1, 5, 6, 7, 8]],
-            "test": [f"S{i}" for i in [9, 11]],
-        }
+        self.subjects = {"train": [f"S{i}" for i in [1, 5, 6, 7, 8]], "test": [f"S{i}" for i in [9, 11]], }
         self.joint_used = [0, 1, 2, 3, 6, 7, 8, 12, 13, 14, 15, 17, 18, 19, 25, 26, 27]
         self.parents = [-1, 0, 1, 2, 0, 4, 5, 0, 7, 8, 9, 8, 11, 12, 8, 14, 15]
-        self.I32_plot = [
-            0,
-            1,
-            2,
-            3,
-            4,
-            0,
-            6,
-            7,
-            8,
-            9,
-            0,
-            11,
-            12,
-            13,
-            14,
-            12,
-            16,
-            17,
-            18,
-            19,
-            20,
-            19,
-            22,
-            12,
-            24,
-            25,
-            26,
-            27,
-            28,
-            27,
-            30,
-        ]
-        self.J32_plot = [
-            1,
-            2,
-            3,
-            4,
-            5,
-            6,
-            7,
-            8,
-            9,
-            10,
-            11,
-            12,
-            13,
-            14,
-            15,
-            16,
-            17,
-            18,
-            19,
-            20,
-            21,
-            22,
-            23,
-            24,
-            25,
-            26,
-            27,
-            28,
-            29,
-            30,
-            31,
-        ]
-        self.LR32_plot = [
-            0,
-            0,
-            0,
-            0,
-            0,
-            1,
-            1,
-            1,
-            1,
-            1,
-            0,
-            0,
-            0,
-            0,
-            0,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-        ]
+        self.I32_plot = [0, 1, 2, 3, 4, 0, 6, 7, 8, 9, 0, 11, 12, 13, 14, 12, 16, 17, 18, 19, 20, 19, 22, 12, 24, 25,
+            26, 27, 28, 27, 30, ]
+        self.J32_plot = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26,
+            27, 28, 29, 30, 31, ]
+        self.LR32_plot = [0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, ]
 
         self.I17_plot = [0, 1, 2, 0, 4, 5, 0, 7, 8, 9, 8, 11, 12, 8, 14, 15]
         self.J17_plot = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
@@ -147,7 +48,7 @@ class ConfigDiverseSampling:
         self.nk = 50
         self.seperate_head = 25
 
-        self.lr_t2 = 1e-3
+        self.lr_t2 = 1e-3  # 1e-05
         self.train_batch_size = 16
         self.test_batch_size = 1
         self.epoch_t2 = 1500
@@ -180,14 +81,8 @@ class ConfigDiverseSampling:
 
         self.valid_angle_path = os.path.join(self.base_data_dir, "chico_valid_angle.p")
         # >>> gsps
-        self.similar_idx_path = os.path.join(
-            self.base_data_dir,
-            "data_multi_modal",
-            "t_his25_1_thre0.500_t_pred100_thre0.100_filtered_dlow.npz",
-        )
-        self.similar_pool_path = os.path.join(
-            self.base_data_dir,
-            "data_multi_modal",
-            "data_candi_t_his25_t_pred100_skiprate20.npz",
-        )
-        self.model_path_t1 = os.path.join(r"./ckpt/pretrained", "chico_t1.pth")
+        self.similar_idx_path = os.path.join(self.base_data_dir, "data_multi_modal",
+            "t_his25_1_thre0.500_t_pred100_thre0.100_filtered_dlow.npz", )
+        self.similar_pool_path = os.path.join(self.base_data_dir, "data_multi_modal",
+            "data_candi_t_his25_t_pred100_skiprate20.npz", )
+        self.model_path_t1 = os.path.join(r"./ckpt/pretrained", "h36m_t1.pth")

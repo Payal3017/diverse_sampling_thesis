@@ -93,7 +93,7 @@ class RunDiverseSampling():
                                                  parents_17=self.cfg.parents,
                                                  mode="train", multimodal_threshold=self.cfg.multimodal_threshold,
                                                  is_debug=self.is_debug)
-        self.test_data = MaoweiGSPS_Dynamic_Seq_H36m(data_path=self.cfg.base_data_dir,
+        self.test_data = MaoweiGSPS_Dynamic_Seq_Chico(data_path=self.cfg.base_data_dir,
                                                 similar_idx_path=self.cfg.similar_idx_path,
                                                 similar_pool_path=self.cfg.similar_pool_path, t_his=self.cfg.t_his,
                                                 t_pred=self.cfg.t_pred, similar_cnt=0,
