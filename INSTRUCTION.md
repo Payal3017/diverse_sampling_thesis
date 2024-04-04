@@ -51,7 +51,7 @@ open `./chico/main_teacher.ipynb` and run all the block step by step in jupyter 
 
 + evaluate on Chico:
 
-  `python main.py --exp_name=chicoo_t2 --is_load=1 --model_path=ckpt/pretrained/chico_t2.pth`
+  `python main.py --exp_name=chico_t2 --is_load=1 --model_path=ckpt/pretrained/chico_t2.pth`
 
 
 

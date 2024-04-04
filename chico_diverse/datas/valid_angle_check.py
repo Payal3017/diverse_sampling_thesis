@@ -145,7 +145,7 @@ def chico_valid_angle_check(p3d):
     return valid_cos
 
 
-def h36m_valid_angle_check_torch(p3d):
+def chico_valid_angle_check_torch(p3d):
     """
     p3d: [bs,16,3] or [bs,48]
     """

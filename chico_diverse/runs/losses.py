@@ -155,7 +155,7 @@ def loss_recons_mmadelike(pred, similars):
         loss_recon_multi = torch.zeros(1, device=pred.device)
     return loss_recon_multi
 
-def loss_valid_angle_t1(pred, valid_ang, data="h36m"):
+def loss_valid_angle_t1(pred, valid_ang, data="chico"):
     '''
 
     :param pred: b, 48, 100
@@ -182,7 +182,7 @@ def loss_valid_angle_t1(pred, valid_ang, data="h36m"):
                 loss += (ang_cos[an][ang_cos[an] > upper_bound] - upper_bound).pow(2).mean()
     return loss
 
-def loss_valid_angle_t2(pred, valid_ang, data="h36m"):
+def loss_valid_angle_t2(pred, valid_ang, data="chico"):
     '''
 
     :param pred: b, 50, 48, 100
@@ -354,7 +354,7 @@ def compute_bone_percent_error(gt_pose, motions, parent_17):
     max_bone_error = torch.max(diff.mean(dim=[-1, -2]), dim=0)[0]
     return avg_bone_error, min_bone_error, max_bone_error
 
-def compute_angle_error(pred, valid_ang, data="h36m"):
+def compute_angle_error(pred, valid_ang, data="chico"):
     '''
     pred: n, 48, 100
 

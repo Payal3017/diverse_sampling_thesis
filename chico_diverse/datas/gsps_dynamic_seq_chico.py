@@ -244,7 +244,7 @@ class MaoweiGSPS_Dynamic_Seq_Chico_ExtandDataset_T1():
 
         self.parents_17 = parents_17
 
-        data_o = np.load(os.path.join(data_path, "data_3d_h36m.npz"), allow_pickle=True)['positions_3d'].item()
+        data_o = np.load(os.path.join(data_path, "data_3d_chico.npz"), allow_pickle=True)['positions_3d'].item()
         self.data = dict(
             filter(lambda x: x[0] in self.subjects, data_o.items()))  # dict [n, 125, 17, 3], hip 不为 0，但其他点会对hip相对化
 
